@@ -629,7 +629,7 @@ void sqlInit ()
 		nlerror ("mysql_init() failed");
 	}
 
-	my_bool opt = true;
+	bool opt = true;
 	if (mysql_options (db, MYSQL_OPT_RECONNECT, &opt))
 	{
 		mysql_close(db);
